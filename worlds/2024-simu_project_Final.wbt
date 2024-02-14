@@ -5,7 +5,6 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Parquetry.proto"
 EXTERNPROTO "../protos/RoadLine.proto"
-EXTERNPROTO "../protos/SolidRoundedBox.proto"
 EXTERNPROTO "../protos/SolidPipe1.proto"
 EXTERNPROTO "../protos/SolidPipe2.proto"
 EXTERNPROTO "../protos/SolidPipe3.proto"
@@ -20,6 +19,9 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/traffic/protos/HighwaySign.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/RoadPillars.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/solids/protos/SolidBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/robotnik/summit_xl_steel/protos/SummitXlSteel.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/husarion/rosbot/protos/Rosbot.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/bitcraze/crazyflie/protos/Crazyflie.proto"
 
 WorldInfo {
   basicTimeStep 20
@@ -27,8 +29,8 @@ WorldInfo {
   }
 }
 Viewpoint {
-  orientation -0.16864890364588697 0.06796148773394411 0.9833304548746719 2.362679169893373
-  position 44.68172510304538 -40.559513418242034 25.891694300704227
+  orientation -0.09467680368634146 0.03866818583273524 0.9947567915064178 2.326195459101907
+  position 68.90592046401775 -74.94390439047943 27.874834974992336
 }
 TexturedBackgroundLight {
 }
@@ -281,4 +283,16 @@ RoadPillars {
   translation -73.9608 75.7566 -1.5
   rotation 0 0 1 -1.5707953071795862
   height 6
+}
+SummitXlSteel {
+  translation -14.49 -15.35 0.118
+  controller "a_road_controller"
+}
+Rosbot {
+  translation -14.83 23.87 0
+  controller "b_obstacle_controller"
+}
+Crazyflie {
+  translation -47.51 53 8.735
+  controller "c_flight_controller"
 }
